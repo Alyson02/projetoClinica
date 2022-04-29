@@ -1,0 +1,28 @@
+﻿@model projetoClinica.Models.ModelLogin
+@{
+    ViewBag.Title = "CadLogin";
+}
+
+<h2>CadLogin</h2>
+
+@using (Html.BeginForm("CadLogin", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.LabelFor(m => m.usuario)
+    <br />
+    @Html.EditorFor(m => m.usuario)
+    <br />
+    @Html.LabelFor(m => m.senha)
+    <br />
+    @Html.EditorFor(m => m.senha)
+    <br />
+    @Html.LabelFor(m => m.confirmaSenha)
+    <br />
+    @Html.EditorFor(m => m.confirmaSenha)
+    <br />
+    @Html.DropDownList("tipoUsu", "Escolha o Status")
+
+
+    <input type="submit" value="Cadastrar" />
+}
+
+@ViewBag.msgCad

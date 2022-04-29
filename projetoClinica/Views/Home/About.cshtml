@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+
+<br /> Olá, seja bem-vindo @ViewBag.Usuario
+<br />
+
+@if (Session["tipo"].ToString() == "1")
+{
+    <br />
+
+    @Html.ActionLink("Cadastro do Tipo de Usuário", "CadTipo", "Home")
+
+    <br />
+    @Html.ActionLink("Consulta do Tipo de Usuário", "ConsCadTipo", "Home")
+
+    <br />
+    @Html.ActionLink("Cadastro do login", "CadLogin", "Home")
+}
+<br />
+<br />

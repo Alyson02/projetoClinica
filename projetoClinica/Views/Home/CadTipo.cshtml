@@ -1,0 +1,18 @@
+﻿@model projetoClinica.Models.ModelTipoUsu
+@{
+    ViewBag.Title = "CadTipo";
+}
+
+<h2>Cadastro de Tipo de Usuário</h2>
+
+@using (Html.BeginForm("CadTipo", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.LabelFor(m => m.usuario)
+    <br />
+    @Html.EditorFor(m => m.usuario)
+    <br />
+    <br />
+    <input type="submit" value="Cadastrar" />
+}
+
+@ViewBag.msgCad
