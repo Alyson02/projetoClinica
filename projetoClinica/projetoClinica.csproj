@@ -121,10 +121,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AtendimentoController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MedicoController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="Dados\AcoesAtendimento.cs" />
     <Compile Include="Dados\AcoesEspecialidade.cs" />
     <Compile Include="Dados\AcoesLogin.cs" />
     <Compile Include="Dados\AcoesMedico.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelAtendimento.cs" />
     <Compile Include="Models\ModelEspecialidade.cs" />
     <Compile Include="Models\ModelLogin.cs" />
     <Compile Include="Models\ModelMedico.cs" />
@@ -184,11 +187,14 @@
     <Content Include="Views\Especialidade\Index.cshtml" />
     <Content Include="Views\Especialidade\CadEspecialidade.cshtml" />
     <Content Include="Views\Especialidade\getEspecialidade.cshtml" />
+    <Content Include="Views\Atendimento\Index.cshtml" />
+    <Content Include="Views\Atendimento\CadAtendimento.cshtml" />
+    <Content Include="Views\Medico\CreateMedico.cshtml" />
+    <Content Include="Views\Paciente\CadPaciente.cshtml" />
+    <Content Include="Views\Paciente\GetPacientes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Medico\" />
-    <Folder Include="Views\Paciente\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

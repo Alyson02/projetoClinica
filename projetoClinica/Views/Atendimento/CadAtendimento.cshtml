@@ -1,0 +1,56 @@
+﻿@model projetoClinica.Models.ModelAtendimento
+
+
+@{
+    ViewBag.Title = "cadAtendimento";
+}
+
+<h2>Cadastro de Atendimento</h2>
+
+
+
+@using (Html.BeginForm("Agenda"))
+{
+    <label>Agenda</label>
+    <br />
+    <div class="editor-label">
+        @Html.LabelFor(m => m.dataAtend)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.dataAtend, new { htmlAttributes = new { @type = "date" } })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.horaAtend)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.horaAtend, new { htmlAttributes = new { @type = "time" } })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.codPac)
+    </div>
+    <div class="editor-field">
+
+        @Html.DropDownList("paciente", "Escolha o paciente")
+
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.codMedico)
+    </div>
+    <div class="editor-field">
+
+        @Html.DropDownList("medico", "Escolha o médico")
+
+    </div>
+
+    <br />
+    <input type="submit" value="Cadastrar" />
+}
+<br />
+<br />
+
+@ViewBag.msg
+
+

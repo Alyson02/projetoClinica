@@ -17,7 +17,7 @@ namespace projetoClinica.Controllers
 
         // GET: Especialidade
         public ActionResult Index()
-        {
+        { 
             Session["tipo"] = "";
             return View();
         }
